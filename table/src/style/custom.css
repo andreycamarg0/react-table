@@ -1,0 +1,23 @@
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabela {
+    width: 500px;
+    text-align: center;
+    background-color: #d0cece;
+    margin: 0 auto;
+}
+
+.escuro {
+    background-color: #d0cece;
+}
+
+.claro {
+    background-color: #f2f2f2;
+}
+
+.direita {
+    text-align: end;
+}
