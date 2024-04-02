@@ -1,20 +1,32 @@
+import { Button } from 'react-bootstrap';
 import '../style/custom.css';
-import { useState } from 'react';
-import {Button} from 'react-bootstrap/Button';
+import {useState} from 'react';
+
 
 function PriceList() {
-    let valor_a = 1;
-    let valor_b = 2;
-    let [total, setTotal] = useState(valor_a + valor_b)
-
-    function acaoBotao() {
-        setTotal(total + 1);
-        console.log("teste")
-    }
+    let id_produto_1 = 1;
+    let id_produto_2 = 2;
+    let id_produto_3 = 3;
+    var nome_produto1 = "Produto 1";
+    let nome_produto2 = "Produto 2";
+    let nome_produto3 = "Produto 3";
+    let id_categoria_1 = "Categoria 1";
+    let id_categoria_2 = "Categoria 2";
+    let id_categoria_3 = "Categoria 3";
+    let qtde_1 = 5 ;
+    let qtde_2 = 4 ;
+    let qtde_3 = 3 ;
+    let preco_unitario1 = "R$ 10.00" ;
+    let preco_unitario2 = "R$ 35.00" ;
+    let preco_unitario3 = "R$ 41.00" ;
+    let total1 = qtde_1 * preco_unitario1 ;  
+    let total2 = qtde_2 * preco_unitario2 ; 
+    let total3 = qtde_3 * preco_unitario3 ;
+    let total = total1 + total2 + total3
 
     return (
         <div>
-            <table className='tabela'>
+            <table className='tabela' striped="columns">
                 <tbody>
                     <tr>
                         <td colspan="6">Vendas</td>
@@ -28,51 +40,39 @@ function PriceList() {
                         <td className='direita'>Total</td>
                     </tr>
                     <tr className='claro'>
-                        <td>1</td>
-                        <td>Produto 1</td>
-                        <td>Categoria 1</td>
-                        <td className='direita'>5</td>
-                        <td className='direita'>R$ 10,00</td>
-                        <td className='direita'>R$ 50,00</td>
+                        <td>{id_produto_1}</td>
+                        <td>{nome_produto1}</td>
+                        <td>{id_categoria_1}</td>
+                        <td className='direita'>{qtde_1}</td>
+                        <td className='direita'>{preco_unitario1}</td>
+                        <td className='direita'>{total1}</td>
                     </tr>
                     <tr className='escuro'>
-                        <td>2</td>
-                        <td>Produto 2</td>
-                        <td>Categoria 2</td>
-                        <td className='direita'>4</td>
-                        <td className='direita'>R$ 35,00</td>
-                        <td className='direita'>R$ 140,00</td>
+                        <td>{id_produto_2}</td>
+                        <td>{nome_produto2}</td>
+                        <td>{id_categoria_2}</td>
+                        <td className='direita'>{qtde_2}</td>
+                        <td className='direita'>{preco_unitario2}</td>
+                        <td className='direita'>{total2}</td>
                     </tr>
                     <tr className='claro'>
-                        <td>3</td>
-                        <td>Produto 3</td>
-                        <td>Categoria 3</td>
-                        <td className='direita'>3</td>
-                        <td className='direita'>R$ 41,00</td>
-                        <td className='direita'>R$ 123,00</td>
+                        <td>{id_produto_3}</td>
+                        <td>{nome_produto3}</td>
+                        <td>{id_categoria_3}</td>
+                        <td className='direita'>{qtde_3}</td>
+                        <td className='direita'>{preco_unitario3}</td>
+                        <td className='direita'>{total3}</td>
                     </tr>
                     <tr className='escuro'>
                         <td colspan="3"></td>
                         <td className='direita'>12</td>
                         <td className='direita'>R$ 86,00</td>
-                        <td className='direita'>R$ 313,00</td>
-                    </tr>
-
-                    <tr>
-                        <th>Valor 1</th>
-                        <th>Valor 2</th>
-                        <th>Total</th>
-                    </tr>
-                    <tr>
-                        <td>{valor_a}</td>
-                        <td>{valor_b}</td>
-                        <td>{total}</td>
+                        <td className='direita'>{total}</td>
                     </tr>
                 </tbody>
             </table>
             <br />
-            <Button onClick={acaoBotao} variant="primary">Primary</Button>{' '}
-
+            
         </div>
     );
 }
