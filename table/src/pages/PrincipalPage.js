@@ -1,9 +1,11 @@
-import PriceList from "../components/PriceList";
+import FirstExercise from "../exercises/FirstExercise";
+import SecondExercise from "../exercises/SecondExercise";
 
 function PrincipalPage() {
     return (
       <div>
-        <PriceList></PriceList>  
+        <FirstExercise></FirstExercise> 
+        <SecondExercise></SecondExercise>
       </div>
     );
   }
