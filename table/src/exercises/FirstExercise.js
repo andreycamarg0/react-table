@@ -4,7 +4,7 @@ function FirstExercise() {
     let distancia = 100;
     let tempo = distancia / velocidade;
     return (
-      <div>
+      <div className="container">
             O resultado é {tempo}
       </div>
     );

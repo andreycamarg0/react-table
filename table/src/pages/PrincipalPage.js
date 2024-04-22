@@ -10,7 +10,6 @@ function PrincipalPage() {
         <FirstExercise></FirstExercise> 
         <SecondExercise></SecondExercise>
         <ThirdExercise></ThirdExercise>
-        <FourthExercise></FourthExercise>
       </div>
     );
   }

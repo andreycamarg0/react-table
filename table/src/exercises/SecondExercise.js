@@ -17,7 +17,6 @@ function SecondExercise() {
     return (
       <div>
             <h4>{nome}</h4>
-            <input onCharge={alterarNome}></input>
            
       </div>
     );
